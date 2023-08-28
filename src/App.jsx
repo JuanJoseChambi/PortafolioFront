@@ -1,10 +1,8 @@
-import style from "./App.module.css"
 import { Routes, Route } from "react-router-dom"
 import Portafolio from "./View/Portafolio/Portafolio"
 import UpLoadContent from "./View/UpLoadContent/UpLoadContent"
 import axios from "axios"
-import { useEffect } from "react"
-axios.defaults.baseURL="http://localhost:3001/";
+axios.defaults.baseURL="https://portafoliojuanjose.up.railway.app//";
 
 function App() {
 
