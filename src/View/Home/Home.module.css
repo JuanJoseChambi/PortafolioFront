@@ -1,0 +1,110 @@
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    position: relative;
+}
+.nameHome{
+    width: 60%;
+    height: 50%;
+    /* background-color: red; */
+    margin-bottom: 10px;
+}
+.nameHome::after{
+    content: "";
+    animation-name: nameHome;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    font-family: 'Poppins', sans-serif;
+}
+@keyframes nameHome {
+    0%{
+        content: "J|";
+    }
+    12%{
+        content: "Ju|";
+    }
+    24%{
+        content: "Jua|";
+    }
+    40%{
+        content: "Juan|";
+    }
+    52%{
+        content: "Juan J|";
+    }
+    64%{
+        content: "Juan Jo|";
+    }
+    76%{
+        content: "Juan Jos|";
+    }
+    88%{
+        content: "Juan Jose|";
+    }
+    100%{
+        content: "Juan Jose";
+    }
+}
+.bg{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 400px;
+    transform: skewY(8deg);
+    transform-origin: 100%;
+    background:linear-gradient(145deg, #304858, #71aace);
+    z-index: 0;
+}
+.block1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 55%;
+    height: 50vh;
+    /* background-color: red; */
+    z-index: 10;
+    text-align: start;
+}
+.textHome{
+    z-index: 10;
+    /* color: black; */
+    /* background-color: green; */
+    padding: 0 20px;
+    width: 90%;
+    font-size: 34px;
+}
+.home_description{
+    /* background-color: rgba(130, 129, 129, 0.244); */
+    /* color:  black; */
+    width: 90%;
+    height: 14vh;
+    text-align: start;
+    font-size: 15px;
+    padding: 20px;
+    z-index: 20;
+}
+.block2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 60vh;
+    /* background-color: blue; */
+    z-index: 10;
+}
+.lineBottom{
+    width: 20%;
+    height: 5vh;
+    /* background-color: rebeccapurple; */
+    border-bottom: 1px solid #304858;
+    position: absolute;
+    bottom: 0px;
+}

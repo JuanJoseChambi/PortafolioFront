@@ -1,0 +1,96 @@
+.slider{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    min-height: 50vh;
+    background-color: gray;
+}
+.spaceCards{
+    display: flex;
+    align-items: center;
+    width: 30%;
+    min-height:37vh; 
+    position: relative;
+    /* background-color: #efe7e7; */
+    padding: 10px;
+    border-top: 1px solid gray;
+    transition: transform .5s, box-shadow .5s, border .5s;
+}
+.spaceCards:hover{
+    box-shadow: 0px 10px 20px 0px black;
+    border: 1px solid rgb(107, 107, 107);
+    transform: scale(1.05);
+}
+.cardsProyects{
+    max-width: 100%;
+    background-color: transparent;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+.cardsProyects img{
+    width: 100%;
+    animation-name: cardOpacity;
+
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    transition: opacity 0.5s ease-in-out;
+}
+
+@keyframes cardOpacity {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        z-index: 0;
+    }
+}
+.h2cards{
+    /* background-color: white; */
+    margin-top: 0px;
+    height: 5vh;
+}
+.textHover{
+    text-align: start;
+}
+.btn_prev{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: transparent;
+    width: 50%;
+    height: 188px;
+    border: none;
+    font-size: 40px;
+    color: transparent;
+    z-index: 10;
+    transition: color .5s;
+}
+.btn_next{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    width: 50%;
+    height: 188px;
+    border: none;
+    font-size: 40px;
+    color: transparent;
+    z-index: 10;
+    transition: color .5s;
+}
+
+.btn_next:hover, .btn_prev:hover{
+    color: white;
+}
+ 
