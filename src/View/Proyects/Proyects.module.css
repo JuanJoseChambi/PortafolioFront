@@ -9,6 +9,24 @@
     /* background-color: rgba(128, 128, 128, 0.531); */
     position: relative;
 }
+.circleProyects{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: -320px;
+    width: 40%;
+}
+.circleProyectsCenter{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -200px;
+    right: 0px;
+    width: 30%;
+}
 .lineTop{
     width: 20%;
     border-top: 1px solid #304858;
@@ -61,6 +79,7 @@
     width: 280px;
     min-height: 10vh;
     margin: 20px 0;
+    z-index: 100;
     border: 1px solid #7473732d;
     border-radius: 10px;
     transition: transform .5s, box-shadow 1s, border .5s;

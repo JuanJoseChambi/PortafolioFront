@@ -8,6 +8,18 @@
     height: 140vh;
     font-family: 'Poppins', sans-serif;
     user-select: none;
+    position: relative;
+}
+.circleProfileBig{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0px;
+    bottom: -100px;
+    width: 30%;
+    /* background-color: blue; */
+    /* z-index: 10; */
 }
 .containerProfile{
     display: flex;
@@ -15,11 +27,12 @@
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    /* background: rgb(35, 33, 33); */
+    /* background: #efe7e7; */
     width: 90%;
     height: auto;
     position: relative;
     padding: 15px;
+    z-index: 500;
 }
 .containerProfile_image{
     display: flex;
@@ -36,6 +49,7 @@
 .containerProfile_image img{
     width: 63%;
     border: 5px solid rgb(3, 3, 3);
+    box-shadow: 0px 10px 20px 0px black;
 }
 .pImgage{
     width: 65%;
@@ -51,11 +65,14 @@
     align-items: center;
     flex-direction: column;
     text-align: center;
-    background-color: rgba(132, 132, 134, 0.182);
+    background-color: #efe7e7;
     width: 62.8%;
     min-height: 100vh;
     border-radius: 5px;
+    z-index: 100;
     position: relative;
+    box-shadow: 0px 10px 20px 0px black;
+    border: 1px solid rgba(113, 109, 109, 0.329);
 }
 .name{
     background-color: #a5a5a585;
@@ -67,6 +84,7 @@
     background-color: rgba(68, 67, 68, 0.113);
     margin: 15px 0px;
     width: 90%;
+    z-index: 100;
     padding: 10px;
     /* color: black; */
 }

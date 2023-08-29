@@ -1,4 +1,16 @@
-*{
-    padding: 0px;
-    margin: 0px;
+* {
+  padding: 0px;
+  margin: 0px;
+}
+body::-webkit-scrollbar {
+  width: 7px;
+  background-color: #9d979760;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(131, 127, 127, 0.526);
+  border-radius: 50px;
+  border: 1px solid rgb(144, 144, 144);
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: rgb(98, 95, 95);
 }

@@ -1,12 +1,15 @@
 import style from "./Home.module.css";
 import circle from "../../assets/circle.svg"
+import circle2 from "../../assets/circle2.svg"
 
 
 export default function Home() {
   return (
     <div className={style.home} id="Home">
       <div className={style.bg} />
-
+      <div className={style.circle2}>
+        <img src={circle2} alt="circle" />
+      </div>
       <div className={style.block1}>
         <div className={style.textHome}>
           <h1 className={style.nameHome}></h1>

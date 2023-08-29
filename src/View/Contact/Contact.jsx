@@ -1,6 +1,8 @@
 import { useState } from "react";
 import style from "./Contact.module.css"
+import circleContact from "../../assets/circleContact.svg"
 import validations from "./Validations";
+import Swal from "sweetalert2";
 import axios from "axios";
 
 export default function Contact (){
@@ -29,12 +31,35 @@ export default function Contact (){
 
     async function handlerSubmit (event) {
         event.preventDefault();
-        await axios.post("/mensajes", message);
-        setMessage({
-            nombre: "",
-            asunto: "",
-            detalles: ""
-        })
+        if (message.nombre && message.asunto && message.detalles){
+            await axios.post("/mensajes", message);
+            setMessage({
+                nombre: "",
+                asunto: "",
+                detalles: ""
+            })
+            Swal.fire({
+                title: "Mensaje Enviado!" ,
+                icon: 'success',
+                background: "#71aace",
+                toast: 'true',
+                position:'top',     
+                confirmButtonText:'OK',
+                padding: '1,4rem',
+                confirmButtonColor:'#4cf576',
+              });
+        }else{
+            Swal.fire({
+                title: "Datos Incorrectos/ Faltantes." ,
+                icon: 'warning',
+                background: "#71aace",
+                toast: 'true',
+                position:'top',     
+                confirmButtonText:'OK',
+                padding: '1,4rem',
+                confirmButtonColor:'#fa684b',
+              });
+        }
     }
 
 
@@ -65,7 +90,7 @@ export default function Contact (){
                         <textarea onChange={hanlderChange} name="detalles" value={message.detalles} type="text" className={style.textareaContact} placeholder="Detalles del Asunto" />
                         <p className={style.error}>{errors.detalles}</p>
                     </div>
-                    <button type="submit" onClick={handlerSubmit} className={!errors.name && !errors.asunto && !errors.detalles? style.btnContact: style.btnContactInvalid}>Enviar</button>
+                    <button type="submit" onClick={handlerSubmit} className={ !errors.nombre && !errors.asunto && !errors.detalles? style.btnContact: style.btnContactInvalid}>Enviar</button>
                 </form>
             </div>
             <div className={style.rightContanier}>
@@ -73,10 +98,12 @@ export default function Contact (){
                 <a className={style.linkContact} href="mailto:juanjosech.it@gmail.com?subject=Asunto%20del%20mensaje&body=Detalles%20del%20Asunto" target="_blank"><i className='bx bxl-gmail'></i>Gmail</a>
                 <a className={style.linkContact} href="https://www.linkedin.com/in/juanjosechambi" target="_blank"><i className='bx bxl-linkedin-square'></i>Linkedin</a>
                 <a className={style.linkContact} href="https://github.com/JuanJoseChambi" target="_blank"><i className='bx bxl-github' ></i>Github</a>
-                <a className={style.linkContact} href="https://twitter.com/ITJuanJose" target="_blank"><i className='bx bxl-twitter' ></i>Twiter</a>
                 <a className={style.linkContact} href="https://api.whatsapp.com/send?phone=+541161000622&text=Hola!" target="_blank"><i className='bx bxl-whatsapp' ></i>WhatsApp</a>
                 <button onClick={handlerScrollHome} className={style.btnLinksContact}>Home<i className='bx bx-up-arrow-alt'></i></button>
             </div>
+            <div className={style.circleContact}>
+        <img src={circleContact} alt="circle" />
+      </div>
         </div>
     )
 }
