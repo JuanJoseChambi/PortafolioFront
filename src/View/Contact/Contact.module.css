@@ -16,12 +16,16 @@
     position: absolute;
     top: 0px;
 }
+
 .leftContanier{
     display: flex;
     width: 50%;
     height: 90%;
     border-left: 2px solid #5c5a5a;
     padding-left: 15px;
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
 }
 .formContact{
     display: flex;
@@ -54,7 +58,6 @@
     width: 70%;
     height: 30%;
     /* background-color: red; */
-    z-index: 10;
 }
 .textareaContact{
     width: 100%;
@@ -68,7 +71,7 @@
     font-family: 'Poppins', sans-serif;
     border-left: 2px solid #a6a3a3;
     border-radius: 3px;
-    z-index: 10;
+    z-index: 800;
     user-select: none;
     transition: background-color .5s;
 }
@@ -126,7 +129,15 @@
     flex-direction: column;
     width: 40%;
     height: 90%;
+    opacity: 0;
+    transform: translateX(30px);
     /* background-color: rgb(53, 121, 53); */
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+.visibleContact{
+    z-index:100;
+    opacity: 1;
+    transform: translateX(0);
 }
 .h2Contact{
     /* background-color: rgb(78, 78, 189); */

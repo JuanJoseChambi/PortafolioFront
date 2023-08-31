@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import style from "./Contact.module.css"
 import circleContact from "../../assets/circleContact.svg"
 import validations from "./Validations";
@@ -73,10 +73,32 @@ export default function Contact (){
         }
     }
 
+    useEffect(() => {
+        const formulario = document.getElementById("formulario");
+        const redes = document.getElementById("redes")
+
+        function callback (entrys) {
+            entrys.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add(style.visibleContact)
+                }
+            });
+        }
+
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5
+        }
+        const observador = new IntersectionObserver(callback, options)
+        observador.observe(formulario)
+        observador.observe(redes)
+    },[])
+
     return(
         <div className={style.contact} id="contact">
             <div className={style.lineTop} />
-            <div className={style.leftContanier}>
+            <div className={style.leftContanier} id="formulario">
                 <form className={style.formContact}>
                     <div className={style.blockInputs}>
                         <input onChange={hanlderChange} name="nombre" value={message.nombre} type="text" className={style.inputsContact} placeholder="Nombre"/>
@@ -93,7 +115,7 @@ export default function Contact (){
                     <button type="submit" onClick={handlerSubmit} className={ !errors.nombre && !errors.asunto && !errors.detalles? style.btnContact: style.btnContactInvalid}>Enviar</button>
                 </form>
             </div>
-            <div className={style.rightContanier}>
+            <div className={style.rightContanier} id="redes">
                 <p className={style.h2Contact}>Contactame</p>
                 <a className={style.linkContact} href="mailto:juanjosech.it@gmail.com?subject=Asunto%20del%20mensaje&body=Detalles%20del%20Asunto" target="_blank"><i className='bx bxl-gmail'></i>Gmail</a>
                 <a className={style.linkContact} href="https://www.linkedin.com/in/juanjosechambi" target="_blank"><i className='bx bxl-linkedin-square'></i>Linkedin</a>

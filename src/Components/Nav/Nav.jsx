@@ -5,6 +5,26 @@ export default function Nav() {
   const [activeButton, setActiveButton] = useState('Home');
 
   useEffect(() => {
+
+      const buttons = document.getElementById("buttons")
+  
+      function callback (entrys) {
+        entrys.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(style.visibleButtons);
+          }
+        });
+      }
+      const options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.1
+      }
+  
+      const observadorButtons = new IntersectionObserver(callback, options);
+  
+      observadorButtons.observe(buttons);
+
     function handleScroll() {
       const home = document.getElementById('Home');
       const profile = document.getElementById('profile');
@@ -40,29 +60,17 @@ export default function Nav() {
   return (
     <div className={style.nav}>
   
-      <div className={style.containerBtns}>
-        <button
-          onClick={() => handlerScroll('Home')}
-          className={activeButton === 'Home' ? `${style.btns} ${style.active}` : style.btns}
-        >
+      <div className={style.containerBtns} id='buttons'>
+        <button onClick={() => handlerScroll('Home')} className={activeButton === 'Home' ? `${style.btns} ${style.active}` : style.btns}>
           Home
         </button>
-        <button
-          onClick={() => handlerScroll('profile')}
-          className={activeButton === 'profile' ? `${style.btns} ${style.active}` : style.btns}
-        >
+        <button onClick={() => handlerScroll('profile')} className={activeButton === 'profile' ? `${style.btns} ${style.active}` : style.btns}>
           Profile
         </button>
-        <button
-          onClick={() => handlerScroll('proyects')}
-          className={activeButton === 'proyects' ? `${style.btns} ${style.active}` : style.btns}
-        >
+        <button onClick={() => handlerScroll('proyects')} className={activeButton === 'proyects' ? `${style.btns} ${style.active}` : style.btns}>
           Proyects
         </button>
-        <button
-          onClick={() => handlerScroll('contact')}
-          className={activeButton === 'contact' ? `${style.btns} ${style.active}` : style.btns}
-        >
+        <button onClick={() => handlerScroll('contact')} className={activeButton === 'contact' ? `${style.btns} ${style.active}` : style.btns}>
           Contact
         </button>
       </div>

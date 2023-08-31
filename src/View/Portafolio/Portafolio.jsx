@@ -16,12 +16,10 @@ function Portafolio() {
       const {data} = await axios.get("/proyects");
       setProyects(data);
     }
- 
     function handlerBackground () {
       setBackground(!background)
     }
-
-
+   
 
    useEffect(() => {
     handlerProyects()

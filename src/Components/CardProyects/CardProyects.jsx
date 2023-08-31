@@ -17,8 +17,8 @@ function CardProyects({id, titulo, informacion, frontend, backend, db, imagenes,
           {db? <p className={style.textCard}><b>Bases de Datos:</b> {db}</p> : null}
           <b className={style.textCardTitle}>Enlaces :</b>
           <div className={style.blockLinks}>
-            {github? <a className={style.button} target="_black" href={github}><i class='bx bxl-github'></i> GitHub</a>: null}
-            {web? <a className={style.button} target="_black" href={web}><i class='bx bx-news'></i> Web</a> : null}
+            {github? <a className={style.button} target="_black" href={github}><i className='bx bxl-github'></i> GitHub</a>: null}
+            {web? <a className={style.button} target="_black" href={web}><i className='bx bx-news'></i> Web</a> : null}
           </div>
         </div>
     </div>

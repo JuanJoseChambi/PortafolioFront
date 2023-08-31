@@ -76,7 +76,7 @@ export default function Tabs() {
     contentRender = (
       <div className={style.myInfo}>
         <h2 className={style.hs}>Sobre Mi</h2>
-        <p>Soy Juan José, un joven de 18 años que reside en Buenos Aires, Argentina. A los 16 años, descubrí mi pasión por la programación, lo que me llevó a dedicar tiempo y esfuerzo en aprender y mejorar mis habilidades en este campo. Mi determinación y compromiso me impulsan a abordar desafíos y ofrecer soluciones efectivas.<br/><br/>
+        <p>Soy Juan José, un joven de 18 años que reside en Buenos Aires, Argentina. A los 16 años, descubrí mi pasión por la programación, lo que me llevó a dedicar tiempo y esfuerzo en aprender y mejorar mis habilidades en este campo. Mi determinación y compromiso me impulsan a abordar desafíos y ofrecer soluciones efectivas durante este proceso de crecimento en el mundo de la programación.<br/><br/>
         
         En cada proyecto mio o en el que me involucro, pongo un gran énfasis en el crecimiento personal y profesional. Aspiro a contribuir al desarrollo de soluciones innovadoras en el ámbito de la programación. Veo cada día como una oportunidad para aprender y estoy convencido de que, con perseverancia, alcanzaré mis metas como programador.
         </p>
