@@ -10,8 +10,15 @@
     /* background-color: purple; */
     /* overflow-y: scroll; */
     font-family: 'Poppins', sans-serif;
-}
-
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: transform .8s ease-in-out, opacity 1s ease-in-out;
+  }
+  .visibleCards {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
 .containerImg{
     display: flex;
     justify-content: center;
@@ -95,8 +102,4 @@
 .button:hover{
     background-color: rgb(0, 0, 0);
 }
-.button i{
-    font-size: 14px;
-    color: white;
-    margin: 0 4px;
-}
+

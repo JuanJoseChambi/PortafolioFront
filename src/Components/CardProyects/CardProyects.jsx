@@ -1,9 +1,35 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import style from "./CardProyects.module.css"
+import { useRef } from 'react'
 
 function CardProyects({id, titulo, informacion, frontend, backend, db, imagenes, github, web}) {
+  const cardsRef = useRef(null)
+
+
+  
+  useEffect(() => {
+    const card = cardsRef.current
+
+    function callback (entrys) {
+      entrys.forEach(entry => {
+        if (entry.isIntersecting) {
+          console.log(entry.isIntersecting);
+          entry.target.classList.add(style.visibleCards);
+        }
+      });
+    }
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5
+    }
+    const observadorProyects = new IntersectionObserver(callback, options);
+
+    observadorProyects.observe(card);
+  },[])
+
   return (
-    <div className={style.card}>
+    <div className={style.card} ref={cardsRef}>
         <div className={style.containerImg}>
             {imagenes.map((imgs) => <img key={id} className={style.imagenes} src={imgs} alt='Proyect Not Found'/>)}
         </div>

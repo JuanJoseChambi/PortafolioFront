@@ -121,7 +121,7 @@ export default function Contact (){
                 <a className={style.linkContact} href="https://www.linkedin.com/in/juanjosechambi" target="_blank"><i className='bx bxl-linkedin-square'></i>Linkedin</a>
                 <a className={style.linkContact} href="https://github.com/JuanJoseChambi" target="_blank"><i className='bx bxl-github' ></i>Github</a>
                 <a className={style.linkContact} href="https://api.whatsapp.com/send?phone=+541161000622&text=Hola!" target="_blank"><i className='bx bxl-whatsapp' ></i>WhatsApp</a>
-                <button onClick={handlerScrollHome} className={style.btnLinksContact}>Home<i className='bx bx-up-arrow-alt'></i></button>
+                <button onClick={handlerScrollHome} className={style.btnLinksContact}>Inicio<i className='bx bx-up-arrow-alt'></i></button>
             </div>
             <div className={style.circleContact}>
         <img src={circleContact} alt="circle" />

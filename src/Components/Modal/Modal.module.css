@@ -1,0 +1,121 @@
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: row;
+  width: 75%;
+  height: 75vh;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  /* background-color: blue; */
+  border: 1px solid rgba(128, 128, 128, 0.472);
+  box-shadow: 15px 15px 10px 0px rgba(0, 0, 0, 0.461);
+  padding: 10px;
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: opacity 1s ease-in-out, transform 0.5s ease, background-color 0.5s;
+}
+.visibleModal {
+  opacity: 1;
+  transform: translateY(0);
+}
+.btnCloseModal {
+  position: absolute;
+  right: -15px;
+  top: -15px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  transform: scale(0.9);
+  background-color: rgba(197, 197, 197, 0.788);
+  border: 1px solid rgba(172, 168, 168, 0.569);
+  transition: transform 0.3s ease-in-out;
+  /* margin: 0; */
+}
+.btnCloseModal:hover {
+  transform: scale(1);
+}
+.btnCloseModal i {
+  font-size: 20px;
+  margin: 6px;
+  /* background-color: blue; */
+}
+/* ---------------------------- */
+
+.sectionLeft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 40%;
+  min-height: 100%;
+  /* background-color: purple; */
+}
+.containerImage {
+  width: 90%;
+  /* background-color: violet; */
+}
+.imageProyect {
+  width: 100%;
+  border-radius: 20px;
+}
+.enlaces{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 7vh;
+  margin-top: 20px;
+  /* background-color: red; */
+}
+.btnEnlaces{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgb(34, 33, 33);
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    padding: 7px 15px;
+    transition: background-color .5s;
+    text-decoration: none;
+    color: rgb(143, 141, 141);
+    font-size: 12px;
+    /* letter-spacing: 2px; */
+    margin: 0 10px;
+    transition: letter-spacing .3s ease-in-out, background-color .5s;
+}
+.btnEnlaces:hover{
+  background-color: rgb(0, 0, 0);
+  letter-spacing: 2px;
+}
+
+
+/* --------------------------- */
+.sectionRight {
+  width: 60%;
+  height: 100%;
+  /* background-color: violet; */
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0 20px 0 30px;
+}
+.sectionRight::-webkit-scrollbar{
+  width: 7px;
+  background-color:#9d979760;
+}
+.sectionRight::-webkit-scrollbar-thumb{
+  background-color: rgba(131, 127, 127, 0.526);
+  border-radius: 50px;
+  border:1px solid rgb(144, 144, 144);
+}
+.titleProyect{
+    font-size: 38px;
+}
+.infoProyect{
+    font-size: 14px;
+}

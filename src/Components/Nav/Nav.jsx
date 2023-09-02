@@ -33,7 +33,6 @@ export default function Nav() {
 
 
       const scrollPosition = window.scrollY;  
-      console.log(window.scrollY);
       if (scrollPosition >= contact.offsetTop -1) {
         setActiveButton('contact');
       } else if (scrollPosition >= projects.offsetTop -1) {
@@ -64,16 +63,16 @@ export default function Nav() {
   
       <div className={style.containerBtns} id='buttons'>
         <button onClick={() => handlerScroll('Home')} className={activeButton === 'Home' ? `${style.btns} ${style.active}` : style.btns}>
-          Home
+          Inicio
         </button>
         <button onClick={() => handlerScroll('profile')} className={activeButton === 'profile' ? `${style.btns} ${style.active}` : style.btns}>
-          Profile
+          Perfil
         </button>
         <button onClick={() => handlerScroll('proyects')} className={activeButton === 'proyects' ? `${style.btns} ${style.active}` : style.btns}>
-          Proyects
+          Proyectos
         </button>
         <button onClick={() => handlerScroll('contact')} className={activeButton === 'contact' ? `${style.btns} ${style.active}` : style.btns}>
-          Contact
+          Contacto
         </button>
       </div>
     </div>
