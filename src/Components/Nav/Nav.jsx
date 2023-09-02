@@ -33,9 +33,10 @@ export default function Nav() {
 
 
       const scrollPosition = window.scrollY;  
-      if (scrollPosition >= contact.offsetTop) {
+      console.log(window.scrollY);
+      if (scrollPosition >= contact.offsetTop -1) {
         setActiveButton('contact');
-      } else if (scrollPosition >= projects.offsetTop) {
+      } else if (scrollPosition >= projects.offsetTop -1) {
         setActiveButton('proyects');
       } else if (scrollPosition >= profile.offsetTop) {
         setActiveButton('profile');
