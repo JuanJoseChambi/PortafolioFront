@@ -13,7 +13,6 @@ export default function Profile () {
     function callback (entrys) {
         entrys.forEach(entry => {
             if (entry.isIntersecting) {
-                console.log(entry.isIntersecting);
                 entry.target.classList.add(style.visibleInfo);
             }
         });

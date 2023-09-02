@@ -31,7 +31,8 @@ export default function Nav() {
       const projects = document.getElementById('proyects');
       const contact = document.getElementById('contact');
 
-      const scrollPosition = window.scrollY;
+
+      const scrollPosition = window.scrollY;  
       if (scrollPosition >= contact.offsetTop) {
         setActiveButton('contact');
       } else if (scrollPosition >= projects.offsetTop) {

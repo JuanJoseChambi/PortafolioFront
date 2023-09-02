@@ -117,7 +117,7 @@ export default function Contact (){
             </div>
             <div className={style.rightContanier} id="redes">
                 <p className={style.h2Contact}>Contactame</p>
-                <a className={style.linkContact} href="mailto:juanjosech.it@gmail.com?subject=Asunto%20del%20mensaje&body=Detalles%20del%20Asunto" target="_blank"><i className='bx bxl-gmail'></i>Gmail</a>
+                <a className={style.linkContact} href="https://mail.google.com/mail/u/0/?view=cm&amp;fs=1&amp;to=chambijuanjose05@gmail.com" target="_blank"><i className='bx bxl-gmail'></i>Gmail</a>
                 <a className={style.linkContact} href="https://www.linkedin.com/in/juanjosechambi" target="_blank"><i className='bx bxl-linkedin-square'></i>Linkedin</a>
                 <a className={style.linkContact} href="https://github.com/JuanJoseChambi" target="_blank"><i className='bx bxl-github' ></i>Github</a>
                 <a className={style.linkContact} href="https://api.whatsapp.com/send?phone=+541161000622&text=Hola!" target="_blank"><i className='bx bxl-whatsapp' ></i>WhatsApp</a>

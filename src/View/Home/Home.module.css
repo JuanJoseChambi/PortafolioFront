@@ -23,6 +23,29 @@
     
 }
 
+
+
+.bg{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 400px;
+    transform: skewY(8deg);
+    transform-origin: 100%;
+    background:linear-gradient(145deg, #304858, #71aace);
+    z-index: 1;
+}
+.block1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 55%;
+    min-height: 50vh;
+    /* background-color: red; */
+    z-index: 10;
+    text-align: start;
+}
 .nameHome{
     width: 60%;
     height: 50%;
@@ -65,27 +88,6 @@
         content: "Juan Jose";
     }
 }
-.bg{
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 400px;
-    transform: skewY(8deg);
-    transform-origin: 100%;
-    background:linear-gradient(145deg, #304858, #71aace);
-    z-index: 1;
-}
-.block1{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-    width: 55%;
-    height: 50vh;
-    /* background-color: red; */
-    z-index: 10;
-    text-align: start;
-}
 .textHome{
     z-index: 10;
     /* color: black; */
@@ -107,6 +109,42 @@
     opacity: 0;
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
+.homeButtons{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 90%;
+    margin-top: 0px;
+    /* background-color: rgb(64, 255, 0); */
+    opacity: 0;
+    transform: translateY(100px);
+    transition: transform 1.1s ease-in-out, opacity 0.5s ease-in-out;
+}
+.buttonsLeft, .buttonsRight{
+    margin: 0px 0px;
+    padding: 8px 25px;
+    border-radius: 10px;
+    border: 0;
+    outline: none;
+    background:linear-gradient(145deg, #304858b0, #71aace9c);
+    box-shadow: 5px 5px 5px 0px rgba(128, 128, 128, 0.726);
+    border: 1px solid rgba(128, 128, 128, 0.414);
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: transform .2s ease-in-out;
+}
+.buttonsLeft:hover, .buttonsRight:hover{
+    transform: translateY(5px);
+}
+
+.buttonsRight{
+    margin: 0px 30px;
+    color: black;
+    text-decoration: none;
+}
+/* -------------------------------------------- */
 .block2{
     display: flex;
     justify-content: center;

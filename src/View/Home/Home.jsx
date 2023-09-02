@@ -10,6 +10,7 @@ export default function Home() {
   useEffect(() => {
     const homeText = document.getElementById("homeText")
     const circle = document.getElementById("circle");
+    const buttonsHome = document.getElementById("buttonsHome")
 
     function callback (entrys) {
       entrys.forEach(entry => {
@@ -27,10 +28,19 @@ export default function Home() {
     const observador = new IntersectionObserver(callback, options)
     observador.observe(homeText)
     observador.observe(circle)
+    observador.observe(buttonsHome)
 
   },[])
 
-
+  function handlerScroll() {
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+      });
+    }
+  }
   return (
     <div className={style.home} id="Home">
       <div className={style.bg} />
@@ -50,7 +60,12 @@ export default function Home() {
             sequelize, postgreSQL y otras Herramientas
           </p>
         </div>
+        <div className={style.homeButtons} id="buttonsHome">
+          <button className={style.buttonsLeft} onClick={handlerScroll}>Contactar</button>
+          <a className={style.buttonsRight} href="https://mail.google.com/mail/u/0/?view=cm&amp;fs=1&amp;to=chambijuanjose05@gmail.com" target="_blank">Gmail</a>
+        </div>
       </div>
+
 
       <div className={style.block2} id="circle">
         <img src={circle} alt="circle" />
@@ -60,3 +75,4 @@ export default function Home() {
     </div>
   );
 }
+
