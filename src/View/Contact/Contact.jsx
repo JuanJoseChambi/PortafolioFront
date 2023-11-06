@@ -126,6 +126,7 @@ export default function Contact (){
             <div className={style.circleContact}>
         <img src={circleContact} alt="circle" />
       </div>
-        </div>
+        <p className={style.msjFooter}>© 2023 Juan Jose ㅤ•ㅤJJ v1 ㅤ•ㅤPowered by Juan Jose</p>
+    </div>
     )
 }
