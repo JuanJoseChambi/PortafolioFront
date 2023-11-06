@@ -17,7 +17,7 @@ export default function Proyects({ proyects }) {
     }
   }
   return (
-    <main className={style.proyects} id="proyects">
+    <div className={style.proyects} id="proyects">
       <div className={style.lineTop} />
       <div className={style.circleProyects}>
         <img src={circleProyects} alt="circle" />
@@ -46,6 +46,6 @@ export default function Proyects({ proyects }) {
         <div className={style.circleProyectsCenter}>
         <img src={circleProyectsCenter} alt="circle" />
       </div>
-    </main>
+    </div>
   );
 }

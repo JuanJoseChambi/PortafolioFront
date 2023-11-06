@@ -70,7 +70,6 @@
   min-height: 50vh;
   padding: 20px 0;
   /* background-color: red; */
-
 }
 
 .cardContainer {
@@ -86,14 +85,15 @@
   border: 1px solid #7473732d;
   border-radius: 10px;
   background-color: #efe7e729;
-  transition: transform 0.5s ease-in-out, box-shadow 1s, border 0.5s, opacity 1s ease-in-out;
+  transition: transform 0.5s ease-in-out, box-shadow 1s, border 0.5s,
+    opacity 1s ease-in-out;
 }
 .cardContainer:hover {
   box-shadow: 0px 10px 20px 0px black;
   border: 1px solid #6b6b6b00;
   transform: scale(1.05);
 }
-.btnOpenModel{
+.btnOpenModel {
   position: absolute;
   right: -10px;
   top: -10px;
@@ -102,19 +102,19 @@
   cursor: pointer;
   border-radius: 50%;
   z-index: 10;
-  transform: scale(.9);
+  transform: scale(0.9);
   background-color: #c5c5c5af;
   border: 1px solid rgba(172, 168, 168, 0.569);
   opacity: 0;
   transition: transform 0.5s ease-in-out, opacity 1s ease-in-out;
 }
-.btnOpenModel.btnVisible{
+.btnOpenModel.btnVisible {
   opacity: 1;
 }
-.btnOpenModel:hover{
+.btnOpenModel:hover {
   transform: scale(1);
 }
-.btnOpenModel i{
+.btnOpenModel i {
   font-size: 20px;
   margin: 6px;
   /* background-color: blue; */

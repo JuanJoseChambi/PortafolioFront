@@ -41,9 +41,9 @@ function Modal({closeModal, proyectInModal}) {
             <b>Informacion : </b>
             <p className={style.infoProyect}>{proyectInModal.informacion}</p>
             <b>Tecnologias :</b>
-            <p><b>Frontend :</b> {proyectInModal.frontend}</p>
-            <p><b>Backend :</b> {proyectInModal.backend}</p>
-            <p><b>Bases de Datos :</b> {proyectInModal.db}</p>
+            {proyectInModal.frontend ? <p><b>Frontend :</b> {proyectInModal.frontend}</p> : null}
+            {proyectInModal.backend ? <p><b>Backend :</b> {proyectInModal.backend}</p> : null}
+            {proyectInModal.db ? <p><b>Bases de Datos :</b> {proyectInModal.db}</p> : null}
         </div>
     </div>
   )

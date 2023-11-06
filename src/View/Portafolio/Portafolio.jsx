@@ -30,7 +30,7 @@ function Portafolio() {
         <div className={style.switch}>   
           <button className={background?style.button:style.active} onClick={handlerBackground}>{background === false?<i className='bx bxs-sun'></i>:<i className='bx bx-moon' ></i>}</button>
         </div>
-        <Nav/>
+        <Nav className={style.view}/>
         <Home/>                         
         <Profile/>
         <Proyects proyects={proyects}/>
